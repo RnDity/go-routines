@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  gatling:
+    build: .
+    networks:
+      - webservice_default
+    volumes:
+      - ./conf:/opt/gatling/conf
+      - ./user-files:/opt/gatling/user-files
+      - ./results:/opt/gatling/results
+
+networks:
+  webservice_default:
+    external: true

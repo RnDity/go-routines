@@ -1,5 +1,62 @@
-Go Routines
+Współbieżność
+ czyli prawdziwa przewaga Go Lang
+
+Cezary Tarnowski
+Senior Software Developer, RnDity
+cezary.tarnowski@rndity.com
 
 * Agenda
-- a
-- b
+
+- teoria
+- praktyka
+
+.background images/lama_wallpaper.png
+
+* Dlaczego?
+
+.caption 1 ryza papieru ~ 10k LOC
+
+.image images/paper.jpg
+
+.background images/clean_wallpaper.png
+
+* Hello world
+
+.play -edit code/1.go
+
+.background images/clean_wallpaper.png
+
+* Musimy zaczekać
+
+.play code/2.go
+
+.background images/clean_wallpaper.png
+
+* Można to zrobić lepiej? - WaitGroup
+
+.play -edit code/3.go
+
+.background images/clean_wallpaper.png
+
+* Channel - komunikacja do go routine'y
+
+.play code/4.go
+
+.background images/clean_wallpaper.png
+
+* Channel - komunikacja zwrotna z go routine'y
+
+.play code/5.go
+
+.background images/clean_wallpaper.png
+
+* Buffered Channel - Ile go routine używać?
+
+.play code/6.go /START OMIT/,/END OMIT/
+
+.background images/clean_wallpaper.png
+
+* Go routines - w praktyce produkcyjnej
+- upload wielu plików
+- wysyłanie mejli
+- serwer http (ctx)
