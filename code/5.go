@@ -2,7 +2,6 @@ package main
 
 import (
 	"time"
-	"net/http"
 )
 
 func say(s string, ch chan string) {

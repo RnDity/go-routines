@@ -10,53 +10,57 @@ cezary.tarnowski@rndity.com
 - teoria
 - praktyka
 
-.background images/lama_wallpaper.png
+.background images/lama_wallpaper.jpg
 
 * Dlaczego?
 
 .caption 1 ryza papieru ~ 10k LOC
 
-.image images/paper.jpg
+.image images/paper.png
 
-.background images/clean_wallpaper.png
+.background images/slide_wallpaper.jpg
 
 * Hello world
 
 .play -edit code/1.go
 
-.background images/clean_wallpaper.png
+.background images/clean_wallpaper.jpg
 
 * Musimy zaczekać
 
 .play code/2.go
 
-.background images/clean_wallpaper.png
+.background images/clean_wallpaper.jpg
 
 * Można to zrobić lepiej? - WaitGroup
 
 .play -edit code/3.go
 
-.background images/clean_wallpaper.png
+.background images/clean_wallpaper.jpg
 
 * Channel - komunikacja do go routine'y
 
 .play code/4.go
 
-.background images/clean_wallpaper.png
+.background images/clean_wallpaper.jpg
 
 * Channel - komunikacja zwrotna z go routine'y
 
 .play code/5.go
 
-.background images/clean_wallpaper.png
+.background images/clean_wallpaper.jpg
 
 * Buffered Channel - Ile go routine używać?
 
 .play code/6.go /START OMIT/,/END OMIT/
 
-.background images/clean_wallpaper.png
+.background images/clean_wallpaper.jpg
 
 * Go routines - w praktyce produkcyjnej
 - upload wielu plików
+.image images/parallel.png
 - wysyłanie mejli
+.image images/producer_consumer.png
 - serwer http (ctx)
+
+.background images/slide_wallpaper.jpg
