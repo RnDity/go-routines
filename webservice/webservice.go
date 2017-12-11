@@ -16,10 +16,9 @@ func countBests(url string, ch chan int) {
 	}
 	defer res.Body.Close()
 	body, _ := ioutil.ReadAll(res.Body)
-	bodyString:=strings.ToLower(string(body))
 	count := 0
-	for _, s := range strings.Split(string(bodyString), " ") {
-		if strings.HasPrefix(s, "naj") {
+	for _, s := range strings.Split(string(body), " ") {
+		if strings.HasPrefix(strings.ToLower(s), "naj") {
 			count++
 		}
 	}
