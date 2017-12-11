@@ -18,6 +18,6 @@ class BasicSimulation extends Simulation {
     .get("/"))
 
   setUp(
-    scn.inject(atOnceUsers(100))
+    scn.inject(rampUsers(100) over (5 seconds))
   ).protocols(httpConf)
 }
