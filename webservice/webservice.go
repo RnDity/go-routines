@@ -28,6 +28,9 @@ func countBests(url string, ch chan int) {
 func handler(w http.ResponseWriter, _ *http.Request) {
 	ch := make(chan int)
 	go countBests("http://gazeta.pl/", ch)
+	go countBests("http://wp.pl/", ch)
+	go countBests("http://onet.pl/", ch)
+	go countBests("http://wykop.pl/", ch)
 	go countBests("http://pudelek.pl/", ch)
 	fmt.Fprintf(w, "%v", <-ch + <-ch)
 }
