@@ -32,7 +32,7 @@ func handler(w http.ResponseWriter, _ *http.Request) {
 	go countBests("http://onet.pl/", ch)
 	go countBests("http://wykop.pl/", ch)
 	go countBests("http://pudelek.pl/", ch)
-	fmt.Fprintf(w, "%v", <-ch + <-ch)
+	fmt.Fprintf(w, "%v", <-ch + <-ch + <-ch + <-ch + <-ch)
 }
 
 func main() {
@@ -42,4 +42,3 @@ func main() {
 
 // curl -s http://localhost:8080/debug/pprof/trace?seconds=2 > trace.out
 // PPROF_BINARY_PATH=. go tool pprof --gv -alloc_objects http://localhost:8080/debug/pprof/heap
-
