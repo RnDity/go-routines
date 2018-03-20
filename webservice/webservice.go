@@ -37,6 +37,7 @@ func handler(w http.ResponseWriter, _ *http.Request) {
 
 func main() {
 	http.HandleFunc("/", handler)
+	println("listening on 8080")
 	http.ListenAndServe(":8080", nil)
 }
 
